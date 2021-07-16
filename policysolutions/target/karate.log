@@ -1,0 +1,1015 @@
+request:
+1 > GET http://localhost:8180/pc
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8180
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 4105 milliseconds for URL: http://localhost:8180/pchttp request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectfeature call failed: classpath:com/gw/GtApiHealthCheck.feature
+arg: {"appUrl":"http://localhost:8180/pc"}
+GtApiHealthCheck.feature:7 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectjavascript function call failed: 
+GtApiHealthCheck.feature:7 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectfailed function body: function() {
+    var pcBaseUrl = java.lang.System.getenv('pcBaseUrl') ? java.lang.System.getenv('pcBaseUrl') : 'http://localhost:8180/pc';
+
+    var config = {
+        util: Java.type('gw.gtapi.util.KarateJavaWrapper'),
+        stepVariablesContainer : Java.type('com.gw.execution.CucumberStepVariablesContainer'),
+        policyDataContainer : Java.type('gw.datacreation.admindata.PolicyDataContainer'),
+        policyUtil: Java.type('gw.util.PolicyUtil')
+    };
+
+    karate.configure('logPrettyRequest', true);
+    karate.configure('logPrettyResponse', true);
+
+    config.PC_URL = pcBaseUrl;
+
+    karate.callSingle('classpath:com/gw/GtApiHealthCheck.feature@id=AppHealthCheck', {'appUrl': config.PC_URL});
+    karate.call('classpath:gtapi-e2e-util.js', config);
+
+    return config;
+}evaluation of 'karate-config.js' failed: javascript function call failed: 
+GtApiHealthCheck.feature:7 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectrequest:
+1 > GET http://localhost:8180/pc
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:8180
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, http call failed after 4120 milliseconds for URL: http://localhost:8180/pchttp request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectfeature call failed: classpath:com/gw/GtApiHealthCheck.feature
+arg: {"appUrl":"http://localhost:8180/pc"}
+GtApiHealthCheck.feature:7 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectjavascript function call failed: 
+GtApiHealthCheck.feature:7 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectfailed function body: function() {
+    var pcBaseUrl = java.lang.System.getenv('pcBaseUrl') ? java.lang.System.getenv('pcBaseUrl') : 'http://localhost:8180/pc';
+
+    var config = {
+        util: Java.type('gw.gtapi.util.KarateJavaWrapper'),
+        stepVariablesContainer : Java.type('com.gw.execution.CucumberStepVariablesContainer'),
+        policyDataContainer : Java.type('gw.datacreation.admindata.PolicyDataContainer'),
+        policyUtil: Java.type('gw.util.PolicyUtil')
+    };
+
+    karate.configure('logPrettyRequest', true);
+    karate.configure('logPrettyResponse', true);
+
+    config.PC_URL = pcBaseUrl;
+
+    karate.callSingle('classpath:com/gw/GtApiHealthCheck.feature@id=AppHealthCheck', {'appUrl': config.PC_URL});
+    karate.call('classpath:gtapi-e2e-util.js', config);
+
+    return config;
+}evaluation of 'karate-config.js' failed: javascript function call failed: 
+GtApiHealthCheck.feature:7 - 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:8180 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connectrequest:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 588.26
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 13:31:36 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~716E8716DD6F6A2E8D50C0D809BA8FC8; Path=/; Secure; HttpOnly
+1 < x-correlation-id: b9a23314-0911-4956-a803-b739711072d9
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='3d49c2b7ddf87ce66b0dc9952a7889759385d210'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".Execution metadata:
+ Feature : COM-AccountSearch
+ Scenario Tags : [@common, @account_search, @DesignatedFunction]
+ Scenario Name : Search for an account with account holder's name
+ Step : Given I am a user with the "Producer" role
+ Step Re-usable Scenario Id : PolicyUserRoleSetup.UserRoleSetup
+ Step Re-usable Scenario Names : [I am a user with the {string} role]
+ Step Parameters : {userRole : Producer}
+
+Execution metadata:
+ Step : CreatePolicyAdminData.PCAdminData
+
+request:
+1 > POST https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic c3U6Z3c=
+1 > Connection: Keep-Alive
+1 > Content-Length: 99
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+1 > X-B3-Flags: 1
+1 > X-B3-ParentSpanId: c8c920b7149f1185
+1 > X-B3-Sampled: 1
+1 > X-B3-SpanId: 11b54967a4b6b6a3
+1 > X-B3-TraceId: 51141a91f089030f
+1 > X-Request-Id: 878635d627dfe717
+{
+  "data": {
+    "attributes": {
+      "roles": [
+        "producer"
+      ],
+      "code": "producerCode172573852",
+      "organization": "pc:1"
+    }
+  }
+}
+
+
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+response time in milliseconds: 131.44
+1 < 404
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 431
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 13:31:37 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < content-language: en
+1 < server: GWRE
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 1
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+status code was: 404, expected: 201, response time: 131, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+feature call failed: classpath:gw/datacreation/admindata/CreatePolicyAdminData.feature
+arg: null
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 131, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 131, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 131, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> 
+feature call failed: classpath:gw/surepath/e2e/steps/admin/PolicyUserRoleSetup.feature
+arg: {"cucumberDataCache":{"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"}},"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"},"templateArgs":{"userRole":"Producer"},"userRole":"Producer","parameters":{"userRole":"Producer"},"scenarioArgs":{"userRole":"Producer"}}
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 131, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6
+Error Executing Step: PolicyUserRoleSetup.UserRoleSetup  com.intuit.karate.exception.KarateException: 
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 131, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6 request:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 472.69
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 13:57:14 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~D7C1F93D845720F569584C02CF2263EC; Path=/; Secure; HttpOnly
+1 < x-correlation-id: 8570a730-6a47-4d76-83bf-420828d2245a
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='95ebfc32a6267b7d2ccde8341c2dd6c9685a5993'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".request:
+1 > POST https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic c3U6Z3c=
+1 > Connection: Keep-Alive
+1 > Content-Length: 72
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+1 > X-B3-Flags: 1
+1 > X-B3-ParentSpanId: c238149259a86dba
+1 > X-B3-Sampled: 1
+1 > X-B3-SpanId: edab8c9961568b24
+1 > X-B3-TraceId: d124343787c912af
+1 > X-Request-Id: cdb43a641cc3866b
+{
+  "data": {
+    "attributes": {
+      "roles": [
+        null
+      ],
+      "code": null,
+      "organization": null
+    }
+  }
+}
+
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.response time in milliseconds: 142.91
+1 < 404
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 431
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 13:57:15 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < content-language: en
+1 < server: GWRE
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 0
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.status code was: 404, expected: 201, response time: 143, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>request:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 896.46
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:11:02 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~0B03EBC597D43B6F55A385763B00B284; Path=/; Secure; HttpOnly
+1 < x-correlation-id: 90d683ca-cef8-448f-bc48-b92ed218d36f
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='49d0c6048ecea0b1c03b03f85d612ebb608ffcb4'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".Execution metadata:
+ Feature : COM-AccountSearch
+ Scenario Tags : [@common, @account_search, @DesignatedFunction]
+ Scenario Name : Search for an account with account holder's name
+ Step : Given I am a user with the "Producer" role
+ Step Re-usable Scenario Id : PolicyUserRoleSetup.UserRoleSetup
+ Step Re-usable Scenario Names : [I am a user with the {string} role]
+ Step Parameters : {userRole : Producer}
+
+Execution metadata:
+ Step : CreatePolicyAdminData.PCAdminData
+
+request:
+1 > POST https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic c3U6Z3c=
+1 > Connection: Keep-Alive
+1 > Content-Length: 99
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+1 > X-B3-Flags: 1
+1 > X-B3-ParentSpanId: 19fc48a27d5a9a39
+1 > X-B3-Sampled: 1
+1 > X-B3-SpanId: 6901ca5757e0f552
+1 > X-B3-TraceId: 836b541000923ef9
+1 > X-Request-Id: bb05216000a03d34
+{
+  "data": {
+    "attributes": {
+      "roles": [
+        "producer"
+      ],
+      "code": "producerCode778646893",
+      "organization": "pc:1"
+    }
+  }
+}
+
+
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+response time in milliseconds: 138.85
+1 < 404
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 431
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:11:04 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < content-language: en
+1 < server: GWRE
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 0
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+status code was: 404, expected: 201, response time: 139, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+feature call failed: classpath:gw/datacreation/admindata/CreatePolicyAdminData.feature
+arg: null
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 139, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 139, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 139, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> 
+feature call failed: classpath:gw/surepath/e2e/steps/admin/PolicyUserRoleSetup.feature
+arg: {"cucumberDataCache":{"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"}},"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"},"templateArgs":{"userRole":"Producer"},"userRole":"Producer","parameters":{"userRole":"Producer"},"scenarioArgs":{"userRole":"Producer"}}
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 139, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6
+Error Executing Step: PolicyUserRoleSetup.UserRoleSetup  com.intuit.karate.exception.KarateException: 
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 139, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6 request:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 460.93
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:15:59 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~886A00354AC78023008ADF1330213A4C; Path=/; Secure; HttpOnly
+1 < x-correlation-id: db3f28b0-ca34-432c-914e-467076844084
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='5bc2335cb583b950972d26d9026a3632c466e9d4'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".Execution metadata:
+ Feature : COM-AccountSearch
+ Scenario Tags : [@common, @account_search, @DesignatedFunction]
+ Scenario Name : Search for an account with account holder's name
+ Step : Given I am a user with the "Producer" role
+ Step Re-usable Scenario Id : PolicyUserRoleSetup.UserRoleSetup
+ Step Re-usable Scenario Names : [I am a user with the {string} role]
+ Step Parameters : {userRole : Producer}
+
+Execution metadata:
+ Step : CreatePolicyAdminData.PCAdminData
+
+request:
+1 > POST https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic c3U6Z3c=
+1 > Connection: Keep-Alive
+1 > Content-Length: 99
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+1 > X-B3-Flags: 1
+1 > X-B3-ParentSpanId: 78ed021bb09e7e8b
+1 > X-B3-Sampled: 1
+1 > X-B3-SpanId: b6d59437e30f72f9
+1 > X-B3-TraceId: 043e3a112cc234ff
+1 > X-Request-Id: 4441309e66e8f728
+{
+  "data": {
+    "attributes": {
+      "roles": [
+        "producer"
+      ],
+      "code": "producerCode102221964",
+      "organization": "pc:1"
+    }
+  }
+}
+
+
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+response time in milliseconds: 130.07
+1 < 404
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 431
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:16:00 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < content-language: en
+1 < server: GWRE
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 0
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+status code was: 404, expected: 201, response time: 130, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+feature call failed: classpath:gw/datacreation/admindata/CreatePolicyAdminData.feature
+arg: null
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 130, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 130, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 130, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> 
+feature call failed: classpath:gw/surepath/e2e/steps/admin/PolicyUserRoleSetup.feature
+arg: {"cucumberDataCache":{"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"}},"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"},"templateArgs":{"userRole":"Producer"},"userRole":"Producer","parameters":{"userRole":"Producer"},"scenarioArgs":{"userRole":"Producer"}}
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 130, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6
+Error Executing Step: PolicyUserRoleSetup.UserRoleSetup  com.intuit.karate.exception.KarateException: 
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 130, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6 request:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 510.53
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:17:36 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~E30A0666B09DEAC36007F77585A2904B; Path=/; Secure; HttpOnly
+1 < x-correlation-id: f364a74d-7cc4-4667-9ce0-f7c760d7f151
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='71e125237e930379364bb522c55358d352b70ca0'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".Execution metadata:
+ Feature : COM-AccountSearch
+ Scenario Tags : [@common, @account_search, @DesignatedFunction]
+ Scenario Name : Search for an account with account holder's name
+ Step : Given a Personal account
+ Step Re-usable Scenario Id : AccountSteps.PersonalAccount
+ Step Re-usable Scenario Names : [a Personal account]
+ Step Parameters : {}
+
+feature call failed: classpath:gw/surepath/e2e/steps/account/AccountSteps.feature
+arg: {"cucumberDataCache":{"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given a Personal account","scenarioName":"Search for an account with account holder's name"}},"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given a Personal account","scenarioName":"Search for an account with account holder's name"},"templateArgs":{},"parameters":{},"scenarioArgs":{}}
+-unknown-:5 - javascript evaluation failed: policyDataContainer.getPolicyUser(__arg.cucumberDataCache.currentUserRole).getName(), Exception during java execution:Unable to find user with object identifier : undefined
+java.lang.RuntimeException: Unable to find user with object identifier : undefined
+	at gw.datacreation.admindata.PolicyDataContainer.getPolicyUser(PolicyDataContainer.java:19)
+	at jdk.scripting.nashorn.scripts/jdk.nashorn.internal.scripts.Script$Recompilation$51$\^eval\_$cu1$restOf/0x0000000100501840.:program(<eval>:1)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:655)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:527)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:456)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:413)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:409)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:162)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:233)
+	at com.intuit.karate.ScriptBindings.eval(ScriptBindings.java:141)
+	at com.intuit.karate.ScriptBindings.updateBindingsAndEval(ScriptBindings.java:136)
+	at com.intuit.karate.ScriptBindings.evalInNashorn(ScriptBindings.java:121)
+	at com.intuit.karate.Script.evalJsExpression(Script.java:421)
+	at com.intuit.karate.Script.evalKarateExpression(Script.java:335)
+	at com.intuit.karate.Script.assign(Script.java:636)
+	at com.intuit.karate.core.ScenarioContext.assign(ScenarioContext.java:669)
+	at com.intuit.karate.StepActions.def(StepActions.java:191)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.intuit.karate.core.Engine.executeStep(Engine.java:153)
+	at com.intuit.karate.core.ScenarioExecutionUnit.execute(ScenarioExecutionUnit.java:219)
+	at com.intuit.karate.core.ScenarioExecutionUnit.run(ScenarioExecutionUnit.java:297)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:195)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:94)
+	at com.intuit.karate.core.Engine.executeFeatureSync(Engine.java:112)
+	at com.intuit.karate.Script.evalFeatureCall(Script.java:1779)
+	at com.intuit.karate.Script.evalFeatureCall(Script.java:1764)
+	at com.intuit.karate.core.ScriptBridge.call(ScriptBridge.java:442)
+	at jdk.scripting.nashorn.scripts/jdk.nashorn.internal.scripts.Script$Recompilation$48$1306AA$\^eval\_$cu1$restOf.step(<eval>:43)
+	at jdk.scripting.nashorn.scripts/jdk.nashorn.internal.scripts.Script$Recompilation$35$\^eval\_$cu1$restOf/0x00000001004c2c40.:program(<eval>:1)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:655)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:527)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:456)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:413)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:409)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:162)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:233)
+	at com.intuit.karate.ScriptBindings.eval(ScriptBindings.java:141)
+	at com.intuit.karate.ScriptBindings.updateBindingsAndEval(ScriptBindings.java:136)
+	at com.intuit.karate.ScriptBindings.evalInNashorn(ScriptBindings.java:121)
+	at com.intuit.karate.Script.evalJsExpression(Script.java:421)
+	at com.intuit.karate.core.ScenarioContext.eval(ScenarioContext.java:873)
+	at com.intuit.karate.StepActions.eval(StepActions.java:378)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.intuit.karate.core.Engine.executeStep(Engine.java:153)
+	at com.intuit.karate.core.ScenarioExecutionUnit.execute(ScenarioExecutionUnit.java:219)
+	at com.intuit.karate.core.ScenarioExecutionUnit.run(ScenarioExecutionUnit.java:297)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:195)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:94)
+	at com.intuit.karate.core.Engine.executeFeatureSync(Engine.java:112)
+	at com.intuit.karate.Runner.runFeature(Runner.java:366)
+	at com.gw.execution.GtApiStep.execute(GtApiStep.java:32)
+	at gw.cucumber.CucumberStep.anyStepWithoutDataTable(CucumberStep.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.cucumber.core.runtime.Runtime$SameThreadExecutorService.execute(Runtime.java:243)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+	at io.cucumber.core.runtime.Runtime.lambda$run$3(Runtime.java:100)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.SliceOps$1$1.accept(SliceOps.java:199)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1632)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at io.cucumber.core.runtime.Runtime.run(Runtime.java:101)
+	at io.cucumber.core.cli.Main.run(Main.java:75)
+	at io.cucumber.core.cli.Main.main(Main.java:31)
+
+Error Executing Step: AccountSteps.PersonalAccount  com.intuit.karate.exception.KarateException: 
+-unknown-:5 - javascript evaluation failed: policyDataContainer.getPolicyUser(__arg.cucumberDataCache.currentUserRole).getName(), Exception during java execution:Unable to find user with object identifier : undefined
+java.lang.RuntimeException: Unable to find user with object identifier : undefined
+	at gw.datacreation.admindata.PolicyDataContainer.getPolicyUser(PolicyDataContainer.java:19)
+	at jdk.scripting.nashorn.scripts/jdk.nashorn.internal.scripts.Script$Recompilation$51$\^eval\_$cu1$restOf/0x0000000100501840.:program(<eval>:1)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:655)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:527)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:456)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:413)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:409)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:162)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:233)
+	at com.intuit.karate.ScriptBindings.eval(ScriptBindings.java:141)
+	at com.intuit.karate.ScriptBindings.updateBindingsAndEval(ScriptBindings.java:136)
+	at com.intuit.karate.ScriptBindings.evalInNashorn(ScriptBindings.java:121)
+	at com.intuit.karate.Script.evalJsExpression(Script.java:421)
+	at com.intuit.karate.Script.evalKarateExpression(Script.java:335)
+	at com.intuit.karate.Script.assign(Script.java:636)
+	at com.intuit.karate.core.ScenarioContext.assign(ScenarioContext.java:669)
+	at com.intuit.karate.StepActions.def(StepActions.java:191)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.intuit.karate.core.Engine.executeStep(Engine.java:153)
+	at com.intuit.karate.core.ScenarioExecutionUnit.execute(ScenarioExecutionUnit.java:219)
+	at com.intuit.karate.core.ScenarioExecutionUnit.run(ScenarioExecutionUnit.java:297)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:195)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:94)
+	at com.intuit.karate.core.Engine.executeFeatureSync(Engine.java:112)
+	at com.intuit.karate.Script.evalFeatureCall(Script.java:1779)
+	at com.intuit.karate.Script.evalFeatureCall(Script.java:1764)
+	at com.intuit.karate.core.ScriptBridge.call(ScriptBridge.java:442)
+	at jdk.scripting.nashorn.scripts/jdk.nashorn.internal.scripts.Script$Recompilation$48$1306AA$\^eval\_$cu1$restOf.step(<eval>:43)
+	at jdk.scripting.nashorn.scripts/jdk.nashorn.internal.scripts.Script$Recompilation$35$\^eval\_$cu1$restOf/0x00000001004c2c40.:program(<eval>:1)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:655)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at jdk.scripting.nashorn/jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:527)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:456)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:413)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:409)
+	at jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:162)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:233)
+	at com.intuit.karate.ScriptBindings.eval(ScriptBindings.java:141)
+	at com.intuit.karate.ScriptBindings.updateBindingsAndEval(ScriptBindings.java:136)
+	at com.intuit.karate.ScriptBindings.evalInNashorn(ScriptBindings.java:121)
+	at com.intuit.karate.Script.evalJsExpression(Script.java:421)
+	at com.intuit.karate.core.ScenarioContext.eval(ScenarioContext.java:873)
+	at com.intuit.karate.StepActions.eval(StepActions.java:378)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.intuit.karate.core.Engine.executeStep(Engine.java:153)
+	at com.intuit.karate.core.ScenarioExecutionUnit.execute(ScenarioExecutionUnit.java:219)
+	at com.intuit.karate.core.ScenarioExecutionUnit.run(ScenarioExecutionUnit.java:297)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:195)
+	at com.intuit.karate.core.FeatureExecutionUnit.run(FeatureExecutionUnit.java:94)
+	at com.intuit.karate.core.Engine.executeFeatureSync(Engine.java:112)
+	at com.intuit.karate.Runner.runFeature(Runner.java:366)
+	at com.gw.execution.GtApiStep.execute(GtApiStep.java:32)
+	at gw.cucumber.CucumberStep.anyStepWithoutDataTable(CucumberStep.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.cucumber.core.runtime.Runtime$SameThreadExecutorService.execute(Runtime.java:243)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+	at io.cucumber.core.runtime.Runtime.lambda$run$3(Runtime.java:100)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.SliceOps$1$1.accept(SliceOps.java:199)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1632)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at io.cucumber.core.runtime.Runtime.run(Runtime.java:101)
+	at io.cucumber.core.cli.Main.run(Main.java:75)
+	at io.cucumber.core.cli.Main.main(Main.java:31)
+ request:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 552.40
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:27:39 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~53DED0DA7C580FE11BBED6F829189D79; Path=/; Secure; HttpOnly
+1 < x-correlation-id: 9abe949c-b203-4e5b-864f-c697954ba518
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='db17e23f702601b730a75f6aea55b00dd5b35b90'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".Execution metadata:
+ Feature : COM-AccountSearch
+ Scenario Tags : [@common, @account_search, @DesignatedFunction]
+ Scenario Name : Search for an account with account holder's name
+ Step : Given I am a user with the "Producer" role
+ Step Re-usable Scenario Id : PolicyUserRoleSetup.UserRoleSetup
+ Step Re-usable Scenario Names : [I am a user with the {string} role]
+ Step Parameters : {userRole : Producer}
+
+Execution metadata:
+ Step : CreatePolicyAdminData.PCAdminData
+
+request:
+1 > POST https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic c3U6Z3c=
+1 > Connection: Keep-Alive
+1 > Content-Length: 99
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+1 > X-B3-Flags: 1
+1 > X-B3-ParentSpanId: 2de1bf791bd9f8d0
+1 > X-B3-Sampled: 1
+1 > X-B3-SpanId: aa52ccc655066f73
+1 > X-B3-TraceId: 2eb4159c2e879c3f
+1 > X-Request-Id: 1b0b5564dda5ed0e
+{
+  "data": {
+    "attributes": {
+      "roles": [
+        "producer"
+      ],
+      "code": "producerCode667128048",
+      "organization": "pc:1"
+    }
+  }
+}
+
+
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+response time in milliseconds: 134.33
+1 < 404
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 431
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:27:41 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < content-language: en
+1 < server: GWRE
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 0
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+status code was: 404, expected: 201, response time: 134, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+feature call failed: classpath:gw/datacreation/admindata/CreatePolicyAdminData.feature
+arg: null
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 134, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 134, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 134, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> 
+feature call failed: classpath:gw/surepath/e2e/steps/admin/PolicyUserRoleSetup.feature
+arg: {"cucumberDataCache":{"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"}},"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"},"templateArgs":{"userRole":"Producer"},"userRole":"Producer","parameters":{"userRole":"Producer"},"scenarioArgs":{"userRole":"Producer"}}
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 134, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6
+Error Executing Step: PolicyUserRoleSetup.UserRoleSetup  com.intuit.karate.exception.KarateException: 
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 134, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6 request:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 524.15
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:43:20 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~C6068308EFBC345027048FBB80D99D78; Path=/; Secure; HttpOnly
+1 < x-correlation-id: 24f78bb3-80b0-4644-8a1a-f58a8c0439c0
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='63cdac1bca08c928dcadb73c08ae7fd88be98edb'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".Execution metadata:
+ Feature : COM-AccountSearch
+ Scenario Tags : [@common, @account_search, @DesignatedFunction]
+ Scenario Name : Search for an account with account holder's name
+ Step : Given I am a user with the "Producer" role
+ Step Re-usable Scenario Id : PolicyUserRoleSetup.UserRoleSetup
+ Step Re-usable Scenario Names : [I am a user with the {string} role]
+ Step Parameters : {userRole : Producer}
+
+Execution metadata:
+ Step : CreatePolicyAdminData.PCAdminData
+
+request:
+1 > POST https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic c3U6Z3c=
+1 > Connection: Keep-Alive
+1 > Content-Length: 99
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+1 > X-B3-Flags: 1
+1 > X-B3-ParentSpanId: 63d736daf9799c24
+1 > X-B3-Sampled: 1
+1 > X-B3-SpanId: 2bcaa6b8b9f16970
+1 > X-B3-TraceId: ae2a7b016ff8c856
+1 > X-Request-Id: 941ad55394269a25
+{
+  "data": {
+    "attributes": {
+      "roles": [
+        "producer"
+      ],
+      "code": "producerCode744314035",
+      "organization": "pc:1"
+    }
+  }
+}
+
+
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+response time in milliseconds: 135.58
+1 < 404
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 431
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 14:43:22 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < content-language: en
+1 < server: GWRE
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 0
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+status code was: 404, expected: 201, response time: 136, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+feature call failed: classpath:gw/datacreation/admindata/CreatePolicyAdminData.feature
+arg: null
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 136, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 136, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 136, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> 
+feature call failed: classpath:gw/surepath/e2e/steps/admin/PolicyUserRoleSetup.feature
+arg: {"cucumberDataCache":{"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"}},"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"},"templateArgs":{"userRole":"Producer"},"userRole":"Producer","parameters":{"userRole":"Producer"},"scenarioArgs":{"userRole":"Producer"}}
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 136, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6
+Error Executing Step: PolicyUserRoleSetup.UserRoleSetup  com.intuit.karate.exception.KarateException: 
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 136, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6 request:
+1 > GET https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".response time in milliseconds: 684.94
+1 < 200
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 15:07:37 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < cache-control: no-store,no-cache
+1 < expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 < pragma: no-cache
+1 < server: GWRE
+1 < set-cookie: JSESSIONID=9eb916a7c1882988~D056A3B2B53AF57305D5F5CE76F98C0D; Path=/; Secure; HttpOnly
+1 < x-correlation-id: fa26e32e-573d-49f9-859b-23a27d2febbd
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 3
+<!DOCTYPE html><html id='gw-theme--cloud' lang='en'><head> <title>[DEV mode - 50.2.0.637] Guidewire PolicyCenter</title> <!-- Title value will be kept updated via JavaScript, but initialize it correctly --> <base href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/'> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/> <meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=1280'> <link rel='stylesheet' href='css/font.css'/> <link rel='stylesheet' href='css/gen/pretheme.css'/> <link rel='stylesheet' href='css/gen/gw-theme--cloud.css'> <link href='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/resources/img/app/favicon.ico' rel='icon' type='image/x-icon'>  <script src='js/gen/app-ts.js'></script> <script src='js/gen/all.js'></script>  </head><body class='gw-app-pc' data-gw-config='{&quot;prefPanelDefaults&quot;:{&quot;todayClosesDatePicker&quot;:true,&quot;capDateTimeUserInput&quot;:false,&quot;replaceWordProcessingCharacters&quot;:true,&quot;disableFocusOutline&quot;:false,&quot;enableMacroChars&quot;:true,&quot;disableBrowserAutocomplete&quot;:true,&quot;copyAndCutGrabSymbol&quot;:true,&quot;default0Placeholder&quot;:false,&quot;highlightDirtyData&quot;:true,&quot;tabIndexedTooltips&quot;:false,&quot;globalSpacingModifier&quot;:&quot;default&quot;,&quot;scrollToTopOnError&quot;:true,&quot;lockFocusInApplication&quot;:true,&quot;theme&quot;:&quot;gw-theme--cloud&quot;,&quot;fontSize&quot;:&quot;default&quot;,&quot;keyboardNavSelectsListDetail&quot;:true,&quot;alwaysConfirmNavigation&quot;:false,&quot;showWidgetTypesAsInlineTitles&quot;:false},&quot;jicEraPrefixes&quot;:[],&quot;timeout&quot;:600}'><div id='gw-focus-barrier-top' tabindex='0'></div><form class='gw-top-level' id='gw-root-form' method='POST'><div id='gw-body' class='gw-body gw-lang-EN'><div id='gw-north-panel' data-gw-top-level-panel='N' class='gw-north-panel'><div class='gw-NorthPanelWidget--top-section' role='banner'><div class='gw-topPanel'><div id='gw-GuidewireLogoWidget' class='gw-GuidewireLogoWidget'><div id='gw-customer--logo' role='img' aria-label='company logo'></div></div><div id='QuickJump' class='gw-QuickjumpWidget gw-styleTag--NorthPanelWidget gw-ValueWidget gw-editable' data-gw-getset='text' data-gw-autocomplete data-gw-autocomplete-markup data-gw-post-on-enter-key data-gw-shortcut='{&quot;id&quot;:&quot;QuickJump&quot;,&quot;key&quot;:&quot;/&quot;,&quot;op&quot;:&quot;setfocus&quot;,&quot;panel&quot;:&quot;N&quot;}'><input class='gw-QuickjumpWidget--input gw-noTrack' name='QuickJump' type='text' placeholder='Go to (Alt+/)' aria-label='quick jump'/> </div></div><div class='gw-page-load-bar'><div class='gw-page-load-bar--inner'></div></div></div></div><div id='gw-west-center'><div id='gw-west-panel' data-gw-top-level-panel='W' role='region' aria-label='west panel' class='gw-west-panel'><div id='gw-west-panel--children--wrapper'><div id='gw-west-panel--children'></div></div><div id='gw-west-panel--bottom-bar'><div class='gw-west-panel--chat-button' data-gw-click='gwChat.button.toggleOpen' id='WestPanel-ToggleChat'><div class='gw-icon'></div></div><div class='gw-west-panel--minmax-button' data-gw-click='gwWestPanel.toggleMinMax' id='WestPanel-ToggleMinMax'><div class='gw-icon'></div></div></div><div class='gw-WestPanelWidget--drag' data-gw-draggable='gwWestPanel' role='separator'><div class='gw-WestPanelWidget--drag-inner'></div><div class='gw-WestPanelWidget--drag-inner'></div></div><div role='button' data-gw-click='gwWestPanel.toggleMinMax' data-gw-draggable='gwWestPanel' id='gw-west-panel-toggleMinMax_float' aria-label='toggle minimize west panel'><div class='gw-icon'></div></div></div><div id='gw-center-panel' data-gw-top-level-panel='C' role='main' aria-label='' class='gw-center-panel'><div id='gw-center-top-section' class='gw-styleTag--CenterPanelTop' role='region' aria-label='title and toolbar'><div id='gw-fixedTopQuickButtons'><div id='gw-quickErrorButton' data-gw-no-tab-index data-gw-click='gwMessages.quickErrorButton'><div class='gw-icon'></div><div class='gw-label'></div></div></div><div id='gw-center-title-toolbar'><div id='Login-LoginScreen-ttlBar' class='gw-TitleBarWidget gw-placeholder'></div></div></div><div id='gw-center-bottom-section'><div id='Login-LoginScreen' class='gw-ScreenWidget gw-styleTag--CenterPanelWidget' data-gw-edit-id='1_1' data-gw-no-track role='region'><div class='gw-location-name' id='Login-LoginScreen_LocationName' data-gw-dest-hash='DestinationHash_Login+-+%7BentryException%7D%7Btarget%3APolicyCenterStartupPage%7D' data-gw-location-name='Login'></div><div id='Login-LoginScreen-0' class='gw- gw-styleTag--ScreenWidget' role='toolbar'></div><div id='Login-LoginScreen-_msgs' class='gw-MessagesWidget gw-styleTag--ScreenWidget gw-hidden' role='complementary' aria-label='messages'></div><div id='Login-LoginScreen-1' class='gw-PanelColumnWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--ScreenWidget' role='group'><div id='Login-LoginScreen-2' class='gw-SpacerWidget app--login-page--stripes gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-3' class='gw-SpacerWidget app--login-page--logo gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-4' class='gw-SpacerWidget app--login-page--name gw-styleTag--PanelColumnWidget' role='separator'></div><div id='Login-LoginScreen-5' class='gw-PanelRefWidget gw-outer--spacing--none gw-styleTag--PanelColumnWidget' role='group'><div class='gw-panelRefWidget--children gw-inner--spacing--none'><div id='Login-LoginScreen-LoginFormMessage' class='gw-VerbatimWidget gw-styleTag--PanelRefWidget gw-VerbatimWidget--info' role='status'></div><div id='Login-LoginScreen-LoginDV' class='gw-DetailViewWidget gw-outer--spacing--none gw-inner--spacing--none gw-styleTag--PanelRefWidget' role='group'><div class='gw-DetailViewWidget--body'><div id='Login-LoginScreen-LoginDV-1' class='gw-InputColumnWidget gw-inner--spacing--none gw-styleTag--DetailViewWidget' role='group'><div id='Login-LoginScreen-LoginDV-username_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--1'><div id='l--1' class='gw-label'>Username</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-username' class='gw-TextValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input type='text' name='Login-LoginScreen-LoginDV-username' aria-required='false' value=''/> </div></div></div></div><div id='Login-LoginScreen-LoginDV-password_Input' class='gw-InputWidget gw-styleTag--InputColumnWidget' role='group' aria-labelledby='l--2'><div id='l--2' class='gw-label'>Password</div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-password' class='gw-PasswordValueWidget gw-styleTag--InputWidget gw-ValueWidget gw-editable' data-gw-getset='text'><div class='gw-vw--value'><input name='Login-LoginScreen-LoginDV-password' type='password' class='gw-PasswordValueWidget--valueField gw-noTrack' aria-required='false' value=''/> </div><div id='Login-LoginScreen-LoginDV-password-dropMenu' class='gw-PasswordValueWidget--dropMenu gw-hidden gw-isTopLevelMenu gw-hasChildren gw-putSubMenusBelow gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner' aria-haspopup='true' aria-disabled='false' aria-expanded='false'><div class='gw-label'></div></div><div class='gw-action--expand-button' data-gw-click='toggleSubMenu' aria-disabled='false' aria-hidden='true' data-gw-no-tab-index><div class='gw-icon gw-icon--expand'></div></div><div class='gw-subMenu' role='menu' aria-hidden='true'><div id='Login-LoginScreen-LoginDV-password-dropMenu-delete' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Delete</div></div></div><div id='Login-LoginScreen-LoginDV-password-dropMenu-enterNewValue' class=' gw-action--outer' aria-disabled='false'><div role='menuitem' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='gwPassword.clearValue id:Login-LoginScreen-LoginDV-password'><div class='gw-label'>Enter new value</div></div></div></div></div></div></div></div><div id='Login-LoginScreen-LoginDV-submit_Input' class='gw-ButtonInputWidget gw-styleTag--InputColumnWidget gw-InputWidget' role='group'><div class='gw-label gw-emptyLabel'></div><div class='gw-value'><div id='Login-LoginScreen-LoginDV-submit' class='gw-ButtonValueWidget gw-styleTag--InputWidget gw-putSubMenusBelow gw-isTopLevelMenu gw-hasMinimizedView gw-action--outer' aria-disabled='false'><div role='button' class='gw-action--inner gw-hasDivider' aria-haspopup='false' aria-disabled='false' data-gw-click='fireEvent id:^' data-gw-default='{&quot;id&quot;:&quot;Login-LoginScreen-LoginDV-submit&quot;,&quot;key&quot;:&quot;ENTER&quot;,&quot;op&quot;:&quot;fireevent&quot;,&quot;panel&quot;:&quot;C&quot;}'><div class='gw-minimized-view'><div class='gw-label-min gw-min-visible' data-gw-tooltip='Log In'>LI</div></div><div class='gw-label'>Log In</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div aria-hidden='true' class='gw-SouthPanelWidget gw-placeholder' id='gw-south-panel'></div><div id='gw-Utility' class='gw-hidden' aria-hidden='true'><input type='hidden' name='eventSource' id='gw-event-source'/> <input type='hidden' name='eventTarget' id='gw-event-target'/> <input type='hidden' id='gw-event-param'/> <input type='hidden' name='paging' id='gw-paging'/> <input type='hidden' name='gw-util--headers' id='gw-util--headers'/> <input type='hidden' name='gw-util--treeview' id='gw-util--treeview'/> <input type='hidden' name='gw-util--preferences' id='gw-util--preferences'/> <input type='hidden' name='csrfToken' id='csrfToken' value='2396f1c100d8ebdfcc9e29c7e3878d15936b20c2'/><input type='hidden' name='fileUploadUrl' id='fileUploadUrl' value='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/FileUpload.do'/><input type='hidden' name='gw-language' id='gw-language' value='en_US'/><input type='hidden' name='gw-locale' id='gw-locale' value='en_US'/><div class='gw-hidden' id='gw-internalTools-flag'></div><div class='gw-hidden' id='gw-serverEvents' data-gw-info='[{&quot;args&quot;:{&quot;target&quot;:&quot;Screen&quot;},&quot;event&quot;:&quot;STARTED_EDITING&quot;}]'></div><div class='gw-hidden' id='gw-clientCommands' data-gw-info='[{&quot;args&quot;:{&quot;focusId&quot;:&quot;Login-LoginScreen-LoginDV-username&quot;},&quot;command&quot;:&quot;FOCUS&quot;}]'></div><div class='gw-hidden' id='gw-preferenceState'></div><div class='gw-hidden' id='gw-preferences'></div><div class='gw-hidden' id='reqMon'></div><div class='gw-hidden' id='gw-hasUnsavedWork'></div><div class='gw-hidden' id='gw-eraInfo' data-gw-info='[]'></div><div class='gw-hidden' id='gw-amPmInfo' data-gw-info='AM++PM'></div><div class='gw-hidden' id='gw-minDays' data-gw-info='S++M++T++W++T++F++S'></div><div class='gw-hidden' id='gw-shortDays' data-gw-info='Sun++Mon++Tue++Wed++Thu++Fri++Sat'></div><div class='gw-hidden' id='gw-days' data-gw-info='Sunday++Monday++Tuesday++Wednesday++Thursday++Friday++Saturday'></div><div class='gw-hidden' id='gw-shortMonths' data-gw-info='Jan++Feb++Mar++Apr++May++Jun++Jul++Aug++Sep++Oct++Nov++Dec++'></div><div class='gw-hidden' id='gw-months' data-gw-info='January++February++March++April++May++June++July++August++September++October++November++December++'></div><div class='gw-hidden' id='gw-decimal-symbol' data-gw-info='.'></div><div class='gw-hidden' id='gw-thousands-symbol' data-gw-info=','></div><div class='gw-hidden' id='gw-firstDayOfWeek' data-gw-info='0'></div><div class='gw-hidden' id='gw-currencyMacros' data-gw-info='[&quot;k&quot;,&quot;m&quot;,&quot;b&quot;,&quot;t&quot;]'></div><div class='gw-hidden' id='gw-twoDigitYearThreshold' data-gw-info='50'></div><div class='gw-hidden' id='gw-twoDigitYearLate' data-gw-info='20'></div><div class='gw-hidden' id='gw-twoDigitYearEarly' data-gw-info='19'></div><div class='gw-hidden' id='gw-keepAlive' data-gw-info='[]'></div><div class='gw-hidden' id='gw-customPerCharacterRegex1'></div><div class='gw-hidden' id='gw-customPerCharacterRegex2'></div><div class='gw-hidden' id='gw-sessionInfo' data-gw-info='{&quot;appId&quot;:&quot;unsharded:pc&quot;,&quot;isNew&quot;:true,&quot;userId&quot;:&quot;&quot;}'></div><div class='gw-hidden' id='gw-editableControllers' data-gw-info='1_1'></div><div class='gw-hidden' id='gw-title' data-gw-info='[DEV mode - 50.2.0.637] Guidewire PolicyCenter'></div></div><div id='gw-PrefPanel' class='gw-hidden'></div><div id='gw-ShortcutPopupHelp' class='gw-hidden'></div></div></form><div class='gw-click-overlay' id='gw-click-overlay'></div><div id='gw-serverError' class='gw-hidden'></div><div id='gw-focus-barrier-bottom' tabindex='0'></div><script type='text/javascript' src='https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/service/displaykeyvalues?checksum=tGjre5bpvP9D3xVcG%2BC%2FgtgPDOk%3D'></script></body></html>
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 840; The element type "link" must be terminated by the matching end-tag "</link>".Execution metadata:
+ Feature : COM-AccountSearch
+ Scenario Tags : [@common, @account_search, @DesignatedFunction]
+ Scenario Name : Search for an account with account holder's name
+ Step : Given I am a user with the "Producer" role
+ Step Re-usable Scenario Id : PolicyUserRoleSetup.UserRoleSetup
+ Step Re-usable Scenario Names : [I am a user with the {string} role]
+ Step Parameters : {userRole : Producer}
+
+Execution metadata:
+ Step : CreatePolicyAdminData.PCAdminData
+
+request:
+1 > POST https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Basic c3U6Z3c=
+1 > Connection: Keep-Alive
+1 > Content-Length: 100
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.11)
+1 > X-B3-Flags: 1
+1 > X-B3-ParentSpanId: f473fc4f85396773
+1 > X-B3-Sampled: 1
+1 > X-B3-SpanId: 83dbc1bc6e7059b1
+1 > X-B3-TraceId: 198f7af341745029
+1 > X-Request-Id: 2d18fcef2961eabc
+{
+  "data": {
+    "attributes": {
+      "roles": [
+        "producer"
+      ],
+      "code": "producerCode1955809202",
+      "organization": "pc:1"
+    }
+  }
+}
+
+
+parsing failed: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+response time in milliseconds: 145.86
+1 < 404
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-B3-TraceId,X-B3-ParentSpanId,X-B3-SpanId,X-B3-Sampled,X-B3-Flags,X-Request-Id,If-None-Match,GW-Tenant,GW-StarSystem
+1 < Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 431
+1 < Content-Security-Policy: frame-ancestors https://*.guidewire.net
+1 < Content-Type: text/html;charset=utf-8
+1 < Date: Wed, 14 Jul 2021 15:07:39 GMT
+1 < Strict-Transport-Security: max-age=15768000
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-XSS-Protection: 1; mode=block
+1 < content-language: en
+1 < server: GWRE
+1 < x-envoy-decorator-operation: api-account-management-pc-service-edge.canal-gwcpdev-sandbox.svc.cluster.local:80/*
+1 < x-envoy-upstream-service-time: 0
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 3; The markup in the document preceding the root element must be well-formed.
+status code was: 404, expected: 201, response time: 146, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+feature call failed: classpath:gw/datacreation/admindata/CreatePolicyAdminData.feature
+arg: null
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 146, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 146, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html>
+com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 146, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> 
+feature call failed: classpath:gw/surepath/e2e/steps/admin/PolicyUserRoleSetup.feature
+arg: {"cucumberDataCache":{"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"}},"cucumberMetadata":{"scenarioTags":["@common","@account_search","@DesignatedFunction"],"featureName":"COM-AccountSearch","stepName":"Given I am a user with the \"Producer\" role","scenarioName":"Search for an account with account holder's name"},"templateArgs":{"userRole":"Producer"},"userRole":"Producer","parameters":{"userRole":"Producer"},"scenarioArgs":{"userRole":"Producer"}}
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 146, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6
+Error Executing Step: PolicyUserRoleSetup.UserRoleSetup  com.intuit.karate.exception.KarateException: 
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 146, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6 

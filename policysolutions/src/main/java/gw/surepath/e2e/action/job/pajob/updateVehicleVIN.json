@@ -1,0 +1,8 @@
+{
+  "optionalTemplateParameters": ["vin"],
+  "data": {
+    "attributes": {
+      "vin": "#(getAttributeValue(args.vin, 'V1234567'))"
+    }
+  }
+}

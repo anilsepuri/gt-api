@@ -1,0 +1,10 @@
+{
+  "requiredTemplateParameters": ["groupName","organization","producerCodes"],
+  "data": {
+    "attributes": {
+      "name": "#(args.groupName)",
+      "organization": "#(args.organization)",
+      "producerCodes":[ {"id":"#(args.producerCodes)"}]
+    }
+  }
+}

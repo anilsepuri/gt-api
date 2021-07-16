@@ -1,0 +1,38 @@
+{
+  "data": {
+    "attributes": {
+      "annualMileage": 10000,
+      "bodyType": {
+        "code": "motorcycle"
+      },
+      "color": "Yellow",
+      "commutingMiles": 50,
+      "costNew": {
+        "amount": "25000.00",
+        "currency": "usd"
+      },
+      "leaseOrRent": true,
+      "lengthOfLease": {
+        "code": "SixMonthsOrMore"
+      },
+      "licensePlate": "7JDX543",
+      "licenseState": {
+        "code": "CA"
+      },
+      "make": "NewMake",
+      "model": "NewModel",
+      "primaryUse": {
+        "code": "pleasure"
+      },
+      "statedValue": {
+        "amount": "20000.00",
+        "currency": "usd"
+      },
+      "vehicleType": {
+        "code": "other"
+      },
+      "vin": "WDDHF8JB3CA549096",
+      "year": 2015
+    }
+  }
+}

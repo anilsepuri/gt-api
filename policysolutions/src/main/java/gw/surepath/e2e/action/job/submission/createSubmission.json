@@ -1,0 +1,27 @@
+{
+  "requiredTemplateParameters": ["accountId", "jobEffectiveDate", "producerCode"],
+  "optionalTemplateParameters": ["product"],
+  "data": {
+    "attributes": {
+      "account": {
+        "id":  "#(args.accountId)"
+      },
+      "baseState": {
+        "code": "CA"
+      },
+      "jobEffectiveDate": "#(args.jobEffectiveDate)",
+      "producerCode": {
+        "id": "#(args.producerCode)"
+      },
+      "product": {
+        "id": "#(getAttributeValue(args.product, 'PersonalAuto'))"
+      },
+      "quoteType": {
+        "code": "Full"
+      },
+      "termType": {
+        "code": "Annual"
+      }
+    }
+  }
+}

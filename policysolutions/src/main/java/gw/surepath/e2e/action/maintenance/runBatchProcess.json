@@ -1,0 +1,4 @@
+{
+  "requiredTemplateParameters": ["processType"],
+  "processType": "#(args.processType)"
+}

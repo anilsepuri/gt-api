@@ -1,0 +1,17 @@
+{
+  "requiredTemplateParameters" : ["topic", "body"],
+  "optionalTemplateParameters" : ["securityType", "subject"],
+  "data": {
+    "attributes": {
+      "body": "#(args.body)",
+      "confidential": false,
+      "securityType": {
+        "code": "#(getAttributeValue(args.securityType, 'unrestricted'))"
+      },
+      "subject": "#(getAttributeValue(args.subject, 'Coverage Requests'))",
+      "topic": {
+        "code": "#(args.topic)"
+      }
+    }
+  }
+}

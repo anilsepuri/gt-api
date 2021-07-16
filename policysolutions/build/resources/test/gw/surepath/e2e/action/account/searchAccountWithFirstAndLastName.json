@@ -1,0 +1,9 @@
+{
+  "requiredTemplateParameters" : ["accountHolderFirstName", "accountHolderLastName"],
+  "data": {
+    "attributes": {
+      "firstName": "#(args.accountHolderFirstName)",
+      "lastName": "#(args.accountHolderLastName)"
+    }
+  }
+}

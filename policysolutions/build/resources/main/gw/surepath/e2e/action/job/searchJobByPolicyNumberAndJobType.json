@@ -1,0 +1,11 @@
+{
+  "requiredTemplateParameters": ["policyNumber", "jobTypeCode"],
+  "data": {
+    "attributes": {
+      "policyNumber": "#(args.policyNumber)",
+      "jobType": {
+        "code": "#(args.jobTypeCode)"
+      }
+    }
+  }
+}

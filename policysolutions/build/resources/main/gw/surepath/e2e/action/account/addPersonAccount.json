@@ -1,0 +1,42 @@
+{
+  "requiredTemplateParameters" : ["producerCodeId"],
+  "optionalTemplateParameters" : ["state", "accountHolderFirstName", "accountHolderLastName", "accountHolderAddressLine1", "accountHolderCity", "accountHolderPostalCode"],
+  "data": {
+    "attributes": {
+      "initialPrimaryLocation": {
+        "nonSpecific": true,
+        "postalCode": "#(getAttributeValue(args.accountHolderPostalCode, '94404'))",
+        "state": {
+          "code": "#(getAttributeValue(args.state, 'CA'))"
+        }
+      },
+      "initialAccountHolder": {
+        "contactSubtype": "Person",
+        "firstName": "#(getAttributeValue(args.accountHolderFirstName, 'Ray'))",
+        "lastName": "#(getAttributeValue(args.accountHolderLastName, 'Newton'))",
+        "primaryAddress": {
+          "addressLine1":"#(getAttributeValue(args.accountHolderAddressLine1, '1234 Hillsdale Blvd'))",
+          "city": "#(getAttributeValue(args.accountHolderCity, 'Foster City'))",
+          "postalCode": "#(getAttributeValue(args.accountHolderPostalCode, '94404'))",
+          "state": {
+            "code": "#(getAttributeValue(args.state, 'CA'))"
+          }
+        }
+      },
+      "organizationType": {
+        "code": "individual"
+      },
+      "producerCodes": [
+        {
+          "id": "#(args.producerCodeId)"
+        }
+      ],
+      "preferredCoverageCurrency": {
+        "code": "USD"
+      },
+      "preferredSettlementCurrency": {
+        "code": "USD"
+      }
+    }
+  }
+}

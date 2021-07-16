@@ -1,0 +1,98 @@
+plugins {
+    id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.22"
+}
+
+version releaseVersion
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: "java"
+apply plugin: "java-library"
+apply plugin: "idea"
+apply plugin: "scala"
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+test {
+    testLogging {
+        exceptionFormat 'full'
+        events 'started', 'skipped', 'passed', 'failed'
+        showStandardStreams true
+    }
+    outputs.upToDateWhen {false}
+}
+
+clean.doFirst {
+    delete "${buildDir}"
+    delete "target"
+}
+
+dependencies {
+    implementation("org.scala-lang:scala-library:2.12.9") {
+        exclude group:'org.scala-lang', module:'scala-compiler'
+    }
+    implementation group: 'org.scala-lang', name: 'scala-compiler', version: '2.12.12'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir file('src/main/java')
+        }
+        resources{
+            srcDir file('src/main/java')
+        }
+    }
+    test {
+        scala {
+            srcDir file('src/test/scala')
+        }
+        resources {
+            srcDirs = ['src/main/java','src/test/scala']
+        }
+    }
+}
+
+// Gradle task to run Gatling Load Tests
+task gatlingRun(type: JavaExec) {
+    group = 'Load Tests'
+    description = 'Execute Gatling Simulation'
+    classpath = sourceSets.test.runtimeClasspath
+    main = "io.gatling.app.Gatling"
+
+    new File("${buildDir}/reports/gatling").mkdirs()
+
+    args = [
+            '-s', '<Scala Simulation File>',
+            '-rf', "${buildDir}/reports/gatling",
+            '-rd', 'Load Tests'
+    ]
+    systemProperties System.properties
+}
+
+// Gradle task to run custom test suite via test suite name as a System Property
+// Ex: gradle runTestSuite -DtestSuite=CCScenariosRunner command
+task runTestSuite(type: Test) {
+    def testSuiteToRun = System.getProperty("testSuite")
+    include "${testSuiteToRun}.class"
+}
+runTestSuite.onlyIf { System.getProperty("testSuite") != null}
+
+cucumberReports {
+    outputDir = file('target/cucumber-html-reports')
+    buildId = '0'
+    reports = files("target/cucumber-reports/Cucumber.json")
+}

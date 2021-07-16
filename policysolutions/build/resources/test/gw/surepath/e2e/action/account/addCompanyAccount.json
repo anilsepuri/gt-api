@@ -1,0 +1,33 @@
+{
+  "optionalTemplateParameters" : ["producerCodeId", "State", "accountHolderCompanyName", "accountHolderAddressLine1", "accountHolderCity", "accountHolderPostalCode"],
+  "data": {
+    "attributes": {
+      "initialPrimaryLocation": {
+        "nonSpecific": true,
+        "state": {
+          "code": "#(getAttributeValue(args.State, 'CA'))"
+        }
+      },
+      "initialAccountHolder": {
+        "contactSubtype": "Company",
+        "companyName": "#(getAttributeValue(args.accountHolderCompanyName, 'Wright Construction'))",
+        "primaryAddress": {
+          "addressLine1":"#(getAttributeValue(args.accountHolderAddressLine1, '1001 E Hillsdale Blvd'))",
+          "city": "#(getAttributeValue(args.accountHolderCity, 'Foster City'))",
+          "postalCode": "#(getAttributeValue(args.accountHolderPostalCode, '94404'))",
+          "state": {
+            "code": "#(getAttributeValue(args.State, 'CA'))"
+          }
+        }
+      },
+      "organizationType": {
+        "code": "individual"
+      },
+      "producerCodes": [
+        {
+          "id": "#(args.producerCodeId)"
+        }
+      ]
+    }
+  }
+}

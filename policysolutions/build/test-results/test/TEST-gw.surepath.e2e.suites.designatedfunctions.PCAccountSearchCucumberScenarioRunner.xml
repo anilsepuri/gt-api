@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="gw.surepath.e2e.suites.designatedfunctions.PCAccountSearchCucumberScenarioRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="GVL4552" time="0.0">
+  <properties/>
+  <system-out><![CDATA[
+
+?[31mFailed scenarios:?[0m
+?[31mfile:///C:/Users/asepuri/IdeaProjects/gt-api/policysolutions/src/main/java/gw/surepath/e2e/behavior/common/COM-AccountSearch.feature:11?[0m# Search for an account with account holder's name
+
+1 Scenarios (?[31m1 failed?[0m)
+5 Steps (?[31m1 failed?[0m, ?[36m4 skipped?[0m)
+0m11.445s
+
+
+com.intuit.karate.exception.KarateException: GtApiStepExecution.feature:5 - javascript evaluation failed: step(__arg.featureAndScenarioId, __arg.parameters), com.intuit.karate.exception.KarateException: 
+PolicyUserRoleSetup.feature:16 - javascript evaluation failed: setupUserRole(__arg.parameters.userRole), com.intuit.karate.exception.KarateException: 
+CreatePolicyAdminData.feature:7 - javascript evaluation failed: policyAdminData.loadAdminData('policysolutions'), ProducerCodes.feature:17 - status code was: 404, expected: 201, response time: 146, url: https://pc-sandbox-gwcpdev.canal.beta3-andromeda.guidewire.net/PolicyCenter.do/rest/testsupport/v1/producer-codes, response: <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1></body></html> in <eval> at line number 76 at column number 6 in <eval> at line number 76 at column number 6
+	at ?.* step(__arg.featureAndScenarioId, __arg.parameters) (GtApiStepExecution.feature:5)
+	at ?.I am a user with the "Producer" role(file:///C:/Users/asepuri/IdeaProjects/gt-api/policysolutions/src/main/java/gw/surepath/e2e/behavior/common/COM-AccountSearch.feature:8)
+
+
+]]></system-out>
+  <system-err><![CDATA[Jul 14, 2021 11:07:26 AM io.cucumber.junit.Cucumber <init>
+WARNING: By default Cucumber is running in --non-strict mode.
+This default will change to --strict and --non-strict will be removed.
+You can use --strict or @CucumberOptions(strict = true) to suppress this warning
+]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+{
+  "requiredTemplateParameters": ["contactId"],
+  "optionalTemplateParameters": ["drivenPercentage"],
+  "data": {
+    "attributes": {
+      "percentageDriven": "#(getAttributeValue(args.drivenPercentage, 100))",
+      "policyDriver": {
+        "id": "#(args.contactId)"
+      }
+    }
+  }
+}

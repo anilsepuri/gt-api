@@ -1,0 +1,54 @@
+{
+  "data": {
+    "attributes": {
+      "users": [
+        {
+          "userName": "Underwriter",
+          "roles": [
+            "underwriter"
+          ],
+          "groups": [
+            "pcgroup1"
+          ],
+          "uWAuthorityProfiles": [
+            "Underwriter 1"
+          ],
+          "useProducerCodeSecurity": false
+        },
+        {
+          "userName": "Producer",
+          "roles": [
+            "producer"
+          ],
+          "groups": [
+            "pcgroup1"
+          ],
+          "uWAuthorityProfiles": [
+            "Agent 2"
+          ],
+          "useProducerCodeSecurity": true
+        }
+      ],
+      "groups": [
+        {
+          "groupIdentifier": "pcgroup1",
+          "producerCodeIdentifier": "pcproducercode1"
+        },
+        {
+          "groupIdentifier": "pcgroup2",
+          "producerCodeIdentifier": "pcproducercode2"
+        }
+      ],
+      "producerCodes": [
+        {
+          "producerCodeIdentifier": "pcproducercode1",
+          "organization": "pc:1"
+        },
+        {
+          "producerCodeIdentifier": "pcproducercode2",
+          "organization": "pc:2"
+        }
+      ]
+    }
+  }
+}

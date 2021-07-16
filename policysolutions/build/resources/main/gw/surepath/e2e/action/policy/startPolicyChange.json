@@ -1,0 +1,8 @@
+{
+  "requiredTemplateParameters" : ["jobEffectiveDate"],
+  "data": {
+    "attributes": {
+      "jobEffectiveDate": "#(args.jobEffectiveDate)"
+    }
+  }
+}

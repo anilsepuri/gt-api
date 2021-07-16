@@ -1,0 +1,6 @@
+rootProject.name = 'gt-api'
+
+include 'claimsolutions'
+project(':claimsolutions').projectDir = file('claimsolutions')
+include 'policysolutions'
+project(':policysolutions').projectDir = file('policysolutions')
